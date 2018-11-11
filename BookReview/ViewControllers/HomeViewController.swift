@@ -39,6 +39,7 @@ Takes a nonideological approach to achieve a balanced insightful understanding o
         
         self.homeTableView.dataSource = self
         self.homeTableView.delegate = self
+        
     }
 
 }
@@ -106,9 +107,11 @@ extension HomeViewController:UITableViewDataSource{
         return cell
         }else if indexPath.section == 1{
             let cell = tableView.dequeueReusableCell(withIdentifier: "PopularBookTableViewCell", for: indexPath)
+           cell.selectionStyle = .none
             return cell
         }else if indexPath.section == 2{
             let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleTitleTableViewCell", for: indexPath)
+            cell.selectionStyle = .none
             return cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleTableViewCell", for: indexPath) as! ArticleTableViewCell

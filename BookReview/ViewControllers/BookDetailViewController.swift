@@ -10,7 +10,7 @@ import UIKit
 
 class BookDetailViewController: UIViewController {
 
-    @IBOutlet weak var lblBookCover: UIImageView!
+    @IBOutlet weak var imgBookCover: UIImageView!
     @IBOutlet weak var lblBookTitle: UILabel!
     @IBOutlet weak var lblBookAuthor: UILabel!
     @IBOutlet weak var lblBookReleasedDate: UILabel!
@@ -20,7 +20,7 @@ class BookDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        lblBookCover.image = UIImage(named: data.image)
+        imgBookCover.image = UIImage(named: data.image)
         lblBookTitle.text = data.title
         lblBookAuthor.text = data.author
         lblBookReleasedDate.text = data.releaseDate
